@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Backend (Python)
+backend/__pycache__/
+backend/data/submissions.jsonl
+
+# IDE
+.vscode/
+.idea/
+
+# Beget deployment output
+deploy/beget/
