@@ -1,0 +1,13 @@
+Options -Indexes
+RewriteEngine On
+
+# Existing files/directories are served directly.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# API routes are handled by PHP.
+RewriteRule ^api(?:/.*)?$ api/index.php [QSA,L]
+
+# React SPA fallback.
+RewriteRule ^ index.html [L]
